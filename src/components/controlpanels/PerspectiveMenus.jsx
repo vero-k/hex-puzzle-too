@@ -7,6 +7,10 @@ export const PerspectiveMenus = (props) => {
 
     const perspective = useContext(PerspectiveContext)
 
+    const togglePerspective = () =>{
+
+    }
+    
     return(<>
     
         <Button variant="primary" onClick={() => togglePerspective()}>
