@@ -17,6 +17,7 @@ import { baseURL } from '../context/Constants';
 
 export default function Begin() {
 
+  const URL = baseURL;
   const navigate = useNavigate()
 
   const [name, setName] = useState('anonymous');
@@ -25,7 +26,7 @@ export default function Begin() {
 
   const begin = async (e) => {
       try {
-        const response = await axios.get(baseURL + 'newplayer/', { params: { name } });
+        const response = await axios.get(URL + 'newplayer/', { params: { name } });
         const receivedId = response.data.id; 
         setUserID(receivedId); 
         setUserName(name)
